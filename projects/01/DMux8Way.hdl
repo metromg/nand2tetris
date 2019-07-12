@@ -11,10 +11,16 @@
  *                            {0, 0, 0, 0, 0, 0, 0, in} if sel == 111
  */
 
+// dmuxaore, dmuxborf, dmuxcorg, dmuxdorh = Dmux4Way(in, sel0..1); a, e = Dmux(dmuxaore, sel2); b, f = Dmux(dmuxborf, sel2); c, g = Dmux(dmuxcorg, sel2); d, h = Dmux(dmuxdorh, sel2);
+
 CHIP DMux8Way {
     IN in, sel[3];
     OUT a, b, c, d, e, f, g, h;
 
     PARTS:
-    // Put your code here:
+    DMux4Way(in=in, sel=sel[0..1], a=dmuxaore, b=dmuxborf, c=dmuxcorg, d=dmuxdorh);
+    DMux(in=dmuxaore, sel=sel[2], a=a, b=e);
+    DMux(in=dmuxborf, sel=sel[2], a=b, b=f);
+    DMux(in=dmuxcorg, sel=sel[2], a=c, b=g);
+    DMux(in=dmuxdorh, sel=sel[2], a=d, b=h);
 }

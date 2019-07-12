@@ -11,10 +11,14 @@
  *                {0, 0, 0, in} if sel == 11
  */
 
+// dmuxaorc, dmuxbord = Dmux(in, sel0); a, c = Dmux(dmuxaorc, sel1); b, d = Dmux(dmuxbord, sel1);
+
 CHIP DMux4Way {
     IN in, sel[2];
     OUT a, b, c, d;
 
     PARTS:
-    // Put your code here:
+    DMux(in=in, sel=sel[0], a=dmuxaorc, b=dmuxbord);
+    DMux(in=dmuxaorc, sel=sel[1], a=a, b=c);
+    DMux(in=dmuxbord, sel=sel[1], a=b, b=d);
 }
