@@ -4,7 +4,7 @@
 ## 🚧 Progress 🚧
 - [x] Project 01: Boolean logic
 - [x] Project 02: Boolean arithmetic
-- [ ] Project 03: Sequential logic
+- [x] Project 03: Sequential logic
 - [ ] Project 04: Machine language
 - [ ] Project 05: Computer architecture
 - [ ] Project 06: Assembler
