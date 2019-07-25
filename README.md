@@ -5,7 +5,7 @@
 - [x] Project 01: Boolean logic
 - [x] Project 02: Boolean arithmetic
 - [x] Project 03: Sequential logic
-- [ ] Project 04: Machine language
+- [x] Project 04: Machine language
 - [ ] Project 05: Computer architecture
 - [ ] Project 06: Assembler
 - [ ] Project 07: VM I: Stack arithmetic
